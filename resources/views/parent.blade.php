@@ -28,11 +28,11 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Link</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div>
+      </div>
     </nav>
-  <!-- @yield('cabezera')
+  @yield('cabezera')
   <hr>
-  @yield('conenido') -->
+  @yield('contenido')
 </body>
 </html>
