@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>PengüinMarket</title>
+  <script src="js/jquery-2.0.0.js"></script>
+  <script src="js/bootstrap.js"></script>
   <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
-  <link rel="script" src="{{ asset("js/bootstrap.js")}}">
-  <link rel="script" href="{{ asset("js/jquery-2.0.0.js")}}">
+  <link rel="stylesheet" href="{{ asset("css/home.css")}}">
+  <link rel="stylesheet" href="{{ asset("css/welcome.css")}}">
 </head>
-<body>
-    <nav class="navbar navbar-inverse">
+<body class="home-background">
+    <nav class="navbar navbar-inverse nav-alpha">
       <div class="container-fluid">
         <div class="navbar-header">       
-          <a class="navbar-brand" href="">ING. Web</a>
+          <a class="navbar-brand" href=""> LOGO
+            <!-- <img src="{{asset("images/logo.png")}}" alt=""> -->
+          </a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="usuarios">Usuarios <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="FAQ">Preguntas Frecuentes <span class="sr-only">(current)</span></a></li>
           </ul>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
@@ -26,13 +29,15 @@
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
+            <li><a href="#">Iniciar Sesion</a></li>
+            <li><a href="#">Registrarse</a></li>
           </ul>
         </div>
       </div>
     </nav>
-  @yield('cabezera')
-  <hr>
-  @yield('contenido')
+    <div class="center">
+      @yield('cabezera')
+    </div>
+    @yield('contenido')
 </body>
 </html>

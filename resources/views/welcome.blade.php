@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
+@extends('parent')
+  @section('contenido')
+  <div class="row max-container">
+    <div class="col-sm-3 center-align">
+      <div class="dropdown center center-align">
+        <ul class="center-align no-style-list">
+          <li><a href="#">Pizza</a></li>
+          <li><a href="#">Hamburguesa</a></li>
+          <li><a href="#">Sushi</a></li>
+          <li><a href="#">Comida China</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="row">  
+        <div class="col-sm-3 card">
+          <h2>Producto #1</h2>
+          Producto de prueba.
         </div>
-    </body>
-</html>
+        <div class="col-sm-3 card">
+          Producto 2
+        </div>
+        <div class="col-sm-3 card">
+          Producto 3
+        </div>
+        <div class="col-sm-3 card">
+          Producto 4
+        </div>
+      </div>
+    </div>
+  </div>
+  @stop
