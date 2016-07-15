@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +9,14 @@
   <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
   <link rel="stylesheet" href="{{ asset("css/home.css")}}">
   <link rel="stylesheet" href="{{ asset("css/welcome.css")}}">
-  <link rel="stylesheet" href="{{ asset("css/user.css")}}">
 </head>
 <body class="home-background">
     <nav class="navbar navbar-inverse nav-alpha">
       <div class="container-fluid">
         <div class="navbar-header">       
-          <a class="navbar-brand" href="welcome"> LOGO
-            <!-- <img src="{{asset("images/logo.png")}}" alt=""> -->
+          <a class="navbar-brand" href=""> LOGO
+            
+            <img src="{{asset("images/PINGUINO2.png")}}" alt="">
           </a>
         </div>
 
@@ -31,7 +32,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Iniciar Sesion</a></li>
-            <li><a href="register">Registrarse</a></li>
+            <li><a href="#">Registrarse</a></li>
           </ul>
         </div>
       </div>
