@@ -23,6 +23,8 @@
         {{$emp->giro}} <br>
         </div>
         @endforeach
+        {!! $empresas->render() !!}
+       
         @else
         <h1>No hay empresas actualmente</h1>
         @endif
@@ -30,3 +32,4 @@
     </div>
   </div>
   @stop
+
