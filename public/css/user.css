@@ -1,0 +1,10 @@
+.register-container {
+  background-color: beige;
+  border-radius: 15px;
+  padding: 5vh 30vw;
+  text-align: center;
+}
+
+.button-center {
+  text-align: center;
+}
