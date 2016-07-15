@@ -4,28 +4,28 @@
     <div class="col-sm-3 center-align">
       <div class="dropdown center center-align">
         <ul class="center-align no-style-list">
-          <li><a href="#">Pizza</a></li>
-          <li><a href="#">Hamburguesa</a></li>
-          <li><a href="#">Sushi</a></li>
-          <li><a href="#">Comida China</a></li>
+          <a href="#"><li class="list-element">Pizza</li></a>
+          <a href="#"><li class="list-element">Hamburguesa</li></a>
+          <a href="#"><li class="list-element">Sushi</li></a>
+          <a href="#"><li class="list-element">Comida China</li></a>
         </ul>
       </div>
     </div>
     <div class="col-sm-9">
-      <div class="row">  
+      <div class="row">
+          @if($empresas !=null)  
+          @foreach($empresas as $emp)
+
         <div class="col-sm-3 card">
-          <h2>Producto #1</h2>
-          Producto de prueba.
+        <h3>empresa:</h3>
+        {{$emp->nombre}} <br>
+        <h3>giro:</h3>
+        {{$emp->giro}} <br>
         </div>
-        <div class="col-sm-3 card">
-          Producto 2
-        </div>
-        <div class="col-sm-3 card">
-          Producto 3
-        </div>
-        <div class="col-sm-3 card">
-          Producto 4
-        </div>
+        @endforeach
+        @else
+        <h1>No hay empresas actualmente</h1>
+        @endif
       </div>
     </div>
   </div>
