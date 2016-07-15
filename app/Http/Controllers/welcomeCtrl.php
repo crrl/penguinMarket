@@ -10,6 +10,7 @@ use App\empresa;
 class welcomeCtrl extends Controller
 {
   public function getWelcomeView() {
-    return view('welcome');
+    $empresas = empresa::all();
+    return view('welcome',compact('empresas'));
   }
 }
