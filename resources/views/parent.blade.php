@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +8,16 @@
   <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
   <link rel="stylesheet" href="{{ asset("css/home.css")}}">
   <link rel="stylesheet" href="{{ asset("css/welcome.css")}}">
+  <link rel="stylesheet" href="{{ asset("css/user.css")}}">
 </head>
 <body class="home-background">
     <nav class="navbar navbar-inverse nav-alpha">
       <div class="container-fluid">
-        <div class="navbar-header">       
-          <a class="navbar-brand" href=""> LOGO
-            
-            <img src="{{asset("images/PINGUINO2.png")}}" alt="">
-          </a>
-        </div>
-
+       <div class="navbar-header">       
+         <a class="navbar-brand logo-container" href="welcome">            
+           <img src="{{asset("images/PINGUINO2.png")}}" alt="" class="logo">
+         </a>
+       </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="FAQ">Preguntas Frecuentes <span class="sr-only">(current)</span></a></li>
@@ -32,7 +30,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Iniciar Sesion</a></li>
-            <li><a href="#">Registrarse</a></li>
+            <li><a href="register">Registrarse</a></li>
           </ul>
         </div>
       </div>
