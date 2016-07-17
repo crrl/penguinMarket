@@ -1,0 +1,38 @@
+.config {
+  width: 100% !important;
+}
+.config-icon {
+  font-size: 30px;
+}
+
+.company-card {
+  border-radius: 20px;
+  text-align: center;
+  color: #BE6216;
+  height: 200px;
+  width: 45%;
+  margin: 0 0 30px 40px !important;
+  text-align: center;
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.company-card:hover {
+  color: black;
+  height: 200px;
+  text-align: center;
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.add-img {
+  background: url(../images/add.jpg);
+  background-size: 100% 100%;
+  opacity: 1;
+}
+
+.table-config {
+  background: rgba(255,255,255,0.9);
+}

@@ -11,25 +11,25 @@
         </ul>
       </div>
     </div>
+          @if($empresas != null)  
     <div class="col-sm-9">
       <div class="row center">
-          @if($empresas !=null)  
           @foreach($empresas as $emp)
-
+        <a href="products/{{$emp->id}}">
         <div class="col-sm-3 card">
         <h3>empresa:</h3>
         {{$emp->nombre}} <br>
         <h3>giro:</h3>
         {{$emp->giro}} <br>
         </div>
+      </a>
         @endforeach
-        {!! $empresas->render() !!}
-       
-        @else
-        <h1>No hay empresas actualmente</h1>
-        @endif
       </div>
+      {!! $empresas->render() !!}
     </div>
+    @else
+    <h1>No hay empresas actualmente</h1>
+    @endif
   </div>
   @stop
 
