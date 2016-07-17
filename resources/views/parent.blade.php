@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{{ asset("css/home.css")}}">
   <link rel="stylesheet" href="{{ asset("css/welcome.css")}}">
   <link rel="stylesheet" href="{{ asset("css/user.css")}}">
+  <link rel="stylesheet" href="{{ asset("css/config.css")}}">
 </head>
 <body class="home-background">
     <nav class="navbar navbar-inverse nav-alpha">
@@ -20,11 +21,16 @@
        </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class=""><a href="FAQ">Preguntas Frecuentes <span class="sr-only">(current)</span></a></li>
+            <li class=""><a href="">Preguntas Frecuentes <span class="sr-only">(current)</span></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Iniciar Sesion</a></li>
-            <li><a href="register">Registrarse</a></li>
+            @if(!$value)
+            <li><a href="/penguinMarket/public/logIn">Iniciar Sesion</a></li>
+            <li><a href="/penguinMarket/public/register">Registrarse</a></li>
+            @else
+            <li><a href="/penguinMarket/public/config">Hola {{$value}}</a></li>
+            <li><a href="/penguinMarket/public/logOut">Salir</a></li>
+            @endif            
           </ul>
         </div>
       </div>
