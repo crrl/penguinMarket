@@ -5,21 +5,35 @@
 
 .list-element {
   border-radius: 15px;
-  background-color: white;
+  background-color: rgba(230,230,230,0.6);
   border: 1px solid black;
   padding: 10px;
   margin-bottom: 10px;
 }
 
 .list-element:hover {
-  background-color: #E0E0E0;
+  background-color: rgba(255,255,255,1);
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.47);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   height: 200px;
   text-align: center;
   margin-left: 2vw;
   margin-bottom: 4vh;
+  cursor: pointer;
 }
+.card-text {
+  margin-top: 35px;
+}
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  height: 200px;
+  text-align: center;
+  margin-left: 2vw;
+  margin-bottom: 4vh;
+  cursor: pointer;
+}
+
