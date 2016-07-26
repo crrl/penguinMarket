@@ -28,7 +28,7 @@ Route::get('config', 'userCtrl@config');
 Route::get('addProduct', 'productCtrl@addProduct');
 Route::post('saveProduct/{id}', 'productCtrl@saveProduct');
 Route::get('modifyProducts','productCtrl@modifyProductsView');
-Route::get('modifyProductById', 'productCtrl@modifyProductById');
+Route::get('modifyProductById/{id}', 'productCtrl@modifyProductById');
 Route::post('aceptarModificacion/{id}', 'productCtrl@aceptarModificacion');
 Route::get('deleteProductById/{id}', 'productCtrl@deleteProductById');
 Route::get('deleteProducts', 'productCtrl@deleteView');

@@ -5,6 +5,7 @@
     <div class="form-group ">
       <label for="nombre">Correo</label>
       <input type="text" class="form-control" name="Correo">
+
     </div>
     <div class="form-group">
       <label for="Correo">Contraseña</label>

@@ -21,13 +21,14 @@
         @else
           <h1>No hay platillos actualmente</h1>
         @endif
+    </div>
       @else
+      <div class="row">
       <a href="/penguinMarket/public/welcome">
-        <div class="col-sm-12 card">
-            <h1>No tiene acceso a esta información.</h1>
+        <div class="col s12 no-access-card">
+            <div class="no-access-img"></div>
         </div>
       </a>
+      </div>
       @endif
-
-    </div>
   @stop
