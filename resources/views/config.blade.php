@@ -26,10 +26,17 @@
       </a>
     </div>
   @else
-    <a href="/penguinMarket/public/welcome">
-      <div class="col s12 no-access-card">
-          <div class="no-access-img"></div>
-      </div>
-    </a>
+    <div class="row config">
+      <a href="changeUserInfo">
+        <div class="col-sm-6 company-card">
+          <i class="glyphicon glyphicon-edit config-icon">Cambiar información</i><br>          
+        </div>
+      </a>
+      <a href="addUserInfo">
+        <div class="col-sm-6 company-card">
+          <i class="glyphicon glyphicon-plus config-icon">agregar dirección</i><br>          
+        </div>
+      </a>
+    </div>
   @endif
 @stop
