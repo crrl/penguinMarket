@@ -26,6 +26,22 @@
     </tr>
     @endif
   </table>
+  <table class="table table-config">
+    <th>Dirección Extra:</th>
+    <th>Calle</th>
+    <th>Número</th>
+  @if($direccion)
+    @foreach($direccion as $dir)
+    <tr>
+      <td>{{$dir->colonia}}</td>
+      <td>{{$dir->calle}}</td>
+      <td>{{$dir->num}}</td>
+    </tr>
+    @endforeach
+  @else
+  <td>No se encontró dirección extra</td>
+  @endif
+  </table>
   <a href="/penguinMarket/public/showOrderList" class="btn btn-info">Regresar</a>
   </div>
 </div>

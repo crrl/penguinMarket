@@ -22,12 +22,17 @@ class productCtrl extends Controller
 
     public function saveProduct(Request $request, $id) {
         $value = Session::get('usuario');
+      if (!$request->Input('Nombre') || !$request->Input('Precio')) {
+        return view('productAdd',compact('value','id'));
+      } else {
+
         $product = new product();
         $product->nombre = $request->Input('Nombre');
         $product->id_empresa = $id;
         $product->precio = $request->Input('Precio');
         $product->save();
         return redirect('config');
+      }
     }
 
     public function modifyProductsView() {
@@ -47,11 +52,17 @@ class productCtrl extends Controller
       $value = Session::get('usuario');
       $id = Session::get('id');
       $tipo = Session::get('tipo');
-      $product = product::find($idp);
-      $product->Nombre = $request->input('Nombre');
-      $product->Precio = $request->input('Precio');
-      $product->save();
-      return redirect('config');
+      if(!$request->input('Nombre') || !$request->input('Precio'))
+      {
+        $product = DB::table('products')->where('id','=',$idp)->first();
+        return view('modifyProductById',compact('product','value','id'));
+      } else {
+        $product = product::find($idp);
+        $product->Nombre = $request->input('Nombre');
+        $product->Precio = $request->input('Precio');
+        $product->save();
+        return redirect('config');
+      }
     }
 
     public function deleteProductById($idp) {
@@ -126,6 +137,7 @@ class productCtrl extends Controller
     public function moreInfo($userId) {
       $value = Session::get('usuario');
       $user = DB::table('usuario')->where('id','=',$userId)->first();
-      return view('moreInfo', compact('user','value'));
+      $direccion = DB::table('coloniaUsuario')->where('id','=',$userId)->get();
+      return view('moreInfo', compact('user','value','direccion'));
     }
 }
