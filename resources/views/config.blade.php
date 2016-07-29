@@ -26,7 +26,7 @@
       </a>
     </div>
   @else
-    <a href="/penguinMarket/public/welcome">
+    <a href="welcome">
       <div class="col s12 no-access-card">
           <div class="no-access-img"></div>
       </div>
