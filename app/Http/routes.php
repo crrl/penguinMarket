@@ -42,3 +42,8 @@ Route::get('deleteFromCatalog/{id}','productCtrl@deleteFromCatalog');
 Route::get('orderSuccessful/{id}','productCtrl@orderSuccessful');
 Route::get('onTheWay/{id}','productCtrl@onTheWay');
 Route::get('moreInfo/{userId}', 'productCtrl@moreInfo');
+
+Route::get('changeUserInfo','userCtrl@changeUserInfo');
+Route::get('addUserInfo','userCtrl@addUserInfo');
+Route::post('modificarInfo', 'userCtrl@modificarInfo');
+Route::post('addColonia','userCtrl@addColonia');

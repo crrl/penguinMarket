@@ -26,10 +26,17 @@
       </a>
     </div>
   @else
-    <a href="http://162.243.167.78/welcome">
-      <div class="col s12 no-access-card">
-          <div class="no-access-img"></div>
-      </div>
-    </a>
+    <div class="row config">
+      <a href="http://162.243.167.78/changeUserInfo">
+        <div class="col-sm-6 company-card">
+          <i class="glyphicon glyphicon-edit config-icon">Cambiar información</i><br>          
+        </div>
+      </a>
+      <a href="http://162.243.167.78/addUserInfo">
+        <div class="col-sm-6 company-card">
+          <i class="glyphicon glyphicon-plus config-icon">agregar dirección</i><br>          
+        </div>
+      </a>
+    </div>
   @endif
 @stop

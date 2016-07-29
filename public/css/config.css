@@ -57,3 +57,7 @@
   height: 100%;
   text-align: right;
 }
+
+.error {
+  color: red;
+}

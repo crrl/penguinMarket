@@ -8,6 +8,7 @@ use Session;
 use App\Http\Requests;
 use App\empresa;
 use App\usuario;
+use App\Colonia;
 
 class userCtrl extends Controller
 {
@@ -93,5 +94,61 @@ class userCtrl extends Controller
     public function logOut() {
       Session::flush();
       return redirect('welcome');
+    }
+
+    public function changeUserInfo() {
+      $value = Session::get('usuario');
+      $id = Session::get('id');
+      $tipo = Session::get('tipo');
+      $user = DB::table('usuario')->where('id', '=', $id)->first();
+      $colonia = DB::table('coloniaUsuario')->where('id', '=', $id)->get();
+      return view('changeInfo',compact('value','id','tipo','user','colonia'));
+    }
+
+    public function modificarInfo(Request $request) {
+      $value = Session::get('usuario');
+      $id = Session::get('id');
+      $tipo = Session::get('tipo');
+      $user = DB::table('usuario')->where('id', '=', $id)->first();
+      $colonia = DB::table('coloniaUsuario')->where('id', '=', $id)->get();
+      if (!$request->Input('Nombre') || !$request->Input('Telefono') || !$request->Input('Colonia') || !$request->Input('Calle') || !$request->Input('Numero')) {
+        return view('changeInfo',compact('value','id','tipo','user','colonia'));
+      } else {
+        $usuario = usuario::find($id);
+        $usuario->Telefono = $request->Input('Telefono');
+        $usuario->Contrasena = $request->Input('Password');
+        $usuario->Colonia = $request->Input('Colonia');
+        $usuario->Nombre = $request->Input('Nombre');
+        $usuario->Correo = $request->Input('Correo');
+        $usuario->Numero = $request->Input('Numero');
+        $usuario->Calle = $request->Input('Calle');
+        $usuario->save();
+        return redirect('config');
+      }
+    }
+
+      public function addUserInfo() {
+        $value = Session::get('usuario');
+        $id = Session::get('id');
+        $tipo = Session::get('tipo');
+        return view('addColonia',compact('value','id','tipo'));
+      }
+
+      public function addColonia(Request $request) {
+        $value = Session::get('usuario');
+        $id = Session::get('id');
+        $tipo = Session::get('tipo');
+        if (!$request->Input('Colonia') || !$request->Input('Calle') || !$request->Input('Numero')  ) {
+          return view('addColonia',compact('value','id','tipo'));
+        } else {
+
+        $colonia = new Colonia();
+        $colonia->colonia = $request->Input('Colonia');
+        $colonia->calle = $request->Input('Calle');
+        $colonia->num = $request->Input('Numero'); 
+        $colonia->id = $id;
+        $colonia->save();
+        return redirect('config');
+      }
     }
 }
