@@ -15,7 +15,7 @@
     <nav class="navbar navbar-inverse nav-alpha">
       <div class="container-fluid">
        <div class="navbar-header">       
-         <a class="navbar-brand logo-container" href="welcome">            
+         <a class="navbar-brand logo-container" href="http://162.243.167.78/welcome">            
            <img src="{{asset("images/PINGUINO2.png")}}" alt="" class="logo">
          </a>
        </div>
