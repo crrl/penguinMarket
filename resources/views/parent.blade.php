@@ -25,11 +25,11 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             @if(!$value)
-            <li><a href="/penguinMarket/public/logIn">Iniciar Sesion</a></li>
-            <li><a href="/penguinMarket/public/register">Registrarse</a></li>
+            <li><a href="/logIn">Iniciar Sesion</a></li>
+            <li><a href="/register">Registrarse</a></li>
             @else
-            <li><a href="/penguinMarket/public/config">Hola {{$value}}</a></li>
-            <li><a href="/penguinMarket/public/logOut">Salir</a></li>
+            <li><a href="/config">Hola {{$value}}</a></li>
+            <li><a href="/logOut">Salir</a></li>
             @endif            
           </ul>
         </div>

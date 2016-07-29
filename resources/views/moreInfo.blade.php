@@ -26,7 +26,7 @@
     </tr>
     @endif
   </table>
-  <a href="/penguinMarket/public/showOrderList" class="btn btn-info">Regresar</a>
+  <a href="/showOrderList" class="btn btn-info">Regresar</a>
   </div>
 </div>
 @stop

@@ -5,7 +5,7 @@
         @if($dish != null)
 
         @foreach($dish as $emp)
-          <a href="/penguinMarket/public/orderConfirm/{{$ide}}/{{$emp->id}}">
+          <a href="/orderConfirm/{{$ide}}/{{$emp->id}}">
             <div class="col-sm-3">
               <div class="card">
                 <h3>platillo:</h3>
