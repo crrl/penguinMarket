@@ -25,11 +25,11 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             @if(!$value)
-            <li><a href="/logIn">Iniciar Sesion</a></li>
-            <li><a href="/register">Registrarse</a></li>
+            <li><a href="{{url('/login')}}"">Iniciar Sesion</a></li>
+            <li><a href="{{url('/register')}}">Registrarse</a></li>
             @else
-            <li><a href="/config">Hola {{$value}}</a></li>
-            <li><a href="/logOut">Salir</a></li>
+            <li><a href="{{url('/config')}}">Hola {{$value}}</a></li>
+            <li><a href="{{url('/logOut')}}">Salir</a></li>
             @endif            
           </ul>
         </div>
