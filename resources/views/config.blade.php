@@ -27,12 +27,12 @@
     </div>
   @else
     <div class="row config">
-      <a href="changeUserInfo">
+      <a href="http://162.243.167.78/changeUserInfo">
         <div class="col-sm-6 company-card">
           <i class="glyphicon glyphicon-edit config-icon">Cambiar información</i><br>          
         </div>
       </a>
-      <a href="addUserInfo">
+      <a href="http://162.243.167.78/addUserInfo">
         <div class="col-sm-6 company-card">
           <i class="glyphicon glyphicon-plus config-icon">agregar dirección</i><br>          
         </div>
